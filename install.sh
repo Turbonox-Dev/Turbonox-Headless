@@ -101,10 +101,7 @@ echo ""
 echo "📦 Installing dependencies..."
 npm install --production
 
-# Build frontend
-echo ""
-echo "🔨 Building frontend..."
-npm run build
+# Frontend is pre-built in the repository
 
 # Create data directory
 DATA_DIR="${TURBONOX_DATA_DIR:-$HOME/Turbonox}"
