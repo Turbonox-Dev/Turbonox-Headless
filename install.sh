@@ -91,7 +91,7 @@ INSTALL_DIR="${TURBONOX_INSTALL_DIR:-/opt/turbonox}"
     else
         echo "📥 Cloning repository..."
         sudo mkdir -p "$(dirname $INSTALL_DIR)"
-        sudo git clone git@github.com:Turbonox-Dev/Turbonox-Headless.git "$INSTALL_DIR"
+        sudo git clone https://github.com/Turbonox-Dev/Turbonox-Headless.git "$INSTALL_DIR"
         sudo chown -R $USER:$USER "$INSTALL_DIR"
         cd "$INSTALL_DIR"
     fi
