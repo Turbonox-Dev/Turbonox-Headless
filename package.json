@@ -1,6 +1,6 @@
 {
-  "name": "turbonox",
-  "version": "2.0.0",
+  "name": "turbonox-Panel",
+  "version": "1.0.1",
   "description": "Self-Controlled Hosting Hub - Web Panel (Web Panel)",
   "main": "server/index.js",
   "scripts": {
