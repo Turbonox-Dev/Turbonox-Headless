@@ -1,0 +1,36 @@
+[Unit]
+Description=Turbonox Web Panel
+Documentation=https://github.com/Turbonox-Dev/Turbonox-Server
+After=network.target
+
+[Service]
+Type=simple
+User=turbonox
+Group=turbonox
+WorkingDirectory=/opt/turbonox
+ExecStart=/usr/bin/node server/index.js
+Restart=on-failure
+RestartSec=10
+
+# Environment
+Environment=NODE_ENV=production
+Environment=PORT=3456
+
+# Logging
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=turbonox
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/opt/turbonox /home/turbonox
+
+# Resource limits
+LimitNOFILE=65535
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
